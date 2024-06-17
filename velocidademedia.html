@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="velocidademedia.css">
+</head>
+ 
+<body>
+    <h1>Velocidade Média</h1>
+    <input type="number" id="v1">
+
+    <p id="kmh"></p>
+    <input type="button" value="VELOCIDADE" onclick="km()">
+
+    <script>
+        function km() {
+            var v1 = Number(document.getElementById("v1").value);
+            var Kmh = document.getElementById("kmh");
+
+            if (v1 == 60) {
+                Kmh.innerHTML = `Prossiga ${v1}`;
+                Kmh.style.color = "green";
+            } else if (v1 == 80) {
+                Kmh.innerHTML = `Diminua ${v1}`;
+                Kmh.style.color = "yellow";
+            } else if (v1 > 80) {
+                Kmh.innerHTML = `Você tomou multa ${v1}`;
+                Kmh.style.color = "red";
+            }
+        }
+    </script>
+
+</body>
+
+</html>
